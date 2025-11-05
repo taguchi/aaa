@@ -27,24 +27,27 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
-        <header className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            サブスク管理アプリ
-          </h1>
-          <p className="text-gray-600">
+    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50">
+      <div className="container mx-auto px-4 py-12 max-w-7xl">
+        <header className="mb-12 text-center">
+          <div className="inline-block">
+            <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent mb-4 tracking-tight">
+              サブスク管理
+            </h1>
+            <div className="h-1 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 rounded-full"></div>
+          </div>
+          <p className="text-gray-600 mt-6 text-lg">
             サブスクリプションを管理して、解約忘れを防ぎましょう
           </p>
         </header>
 
         <Dashboard subscriptions={subscriptions} />
 
-        <div className="mt-8">
+        <div className="mt-12">
           <SubscriptionForm onAdd={handleAddSubscription} />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-12">
           <SubscriptionList
             subscriptions={subscriptions}
             onDelete={handleDeleteSubscription}
